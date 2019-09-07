@@ -1,5 +1,5 @@
 {
-  "name": "sgt-react",
+  "name": "Counting-Calories",
   "version": "1.0.0",
   "description": "Calorie Counter Application",
   "main": "server/index.js",
