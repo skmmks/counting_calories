@@ -23,6 +23,7 @@ export default class App extends React.Component {
             userInput: res
           });
         })
+        .catch(error => console.error('error: ', error));
   }
   render() {
     return (
