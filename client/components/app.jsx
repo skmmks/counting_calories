@@ -7,7 +7,11 @@ export default class App extends React.Component {
     super(props);
     this.state = {
       userInput: []
-    }
+    };
+    this.getUserInput = this.getUserInput.bind(this);
+  }
+  componentDidMount() {
+    this.getUserInput();
   }
   getUserInput() {
     fetch('/api/userInput', {
