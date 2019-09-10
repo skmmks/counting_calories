@@ -1,5 +1,5 @@
 .logo {
-    width: 15%;
+    width: 10%;
     height: 100%;
     padding: .25%;
     margin: auto;
@@ -15,4 +15,7 @@
 }
 .badge {
     margin-left: 1%;
+}
+.formWrapper {
+    min-height: 95vh;
 }

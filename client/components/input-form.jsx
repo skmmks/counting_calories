@@ -3,6 +3,6 @@ import { InputGroup, InputGroupAddon, Input, Form, FormGroup, Button } from 'rea
 
 export default class InputForm extends React.Component {
     constructor(props) {
-        super(props); 
+        super(props);
     }
 }
