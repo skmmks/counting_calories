@@ -1,8 +1,13 @@
 import React from 'react';
+import { Row, Col, Badge } from 'reactstrap';
 
 function Header(props) {
     return (
-        <span>{ props.average}</span>
+        <Row>
+            <img src="images/smoothies.png" alt="smoothie logo" className="logo"/>
+            <Col> </Col>
+            <Col>Average: <Badge >{props.average} cal</Badge></Col>
+        </Row>
     )
 }
 
