@@ -11,7 +11,17 @@ export default class InputTable extends React.Component {
     }
     render() {
         return(
-            <h1>test</h1>
+            <Col>
+                <Table>
+                    <thead>
+                        <tr>
+                            <th>Meal Time</th>
+                            <th>Meal (What You Ate)</th>
+                            <th>Calories</th>
+                        </tr>
+                    </thead>
+                </Table>
+            </Col>
         )
     }
 }
