@@ -1,0 +1,18 @@
+.logo {
+    width: 15%;
+    height: 100%;
+    padding: .25%;
+    margin: auto;
+}
+.title {
+    font-size: 2em;
+    margin: auto;
+}
+.average {
+    font-size: 2em;
+    text-align: center;
+    margin: auto;
+}
+.badge {
+    margin-left: 1%;
+}
