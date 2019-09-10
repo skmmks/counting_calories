@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Row, Container } from 'reactstrap';
 import Header from './header';
 import InputTable from './input-table';
 
@@ -37,7 +37,19 @@ export default class App extends React.Component {
   render() {
     let average = this.getAverage();
     return (
-      <Header average={average}/>
+        <div className="formWrapper">
+          <Container fluid>
+            <Header average={average}/>
+          </Container>
+          <Container>
+            <Row>
+              <InputTable
+              inputs={this.state.userInput}
+              />
+            </Row>
+          </Container>
+        </div>
+
     );
   }
 }
