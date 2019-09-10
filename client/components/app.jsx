@@ -26,9 +26,18 @@ export default class App extends React.Component {
         })
         .catch(error => console.error('error: ', error));
   }
+  getAverage() {
+    if(!this.state.userInput.length) return 'N/A';
+    const totalInputs = this.state.userInput.reduce((total, calories) => {
+      return total + calories.calories;
+    }, 0);
+    const averageInput = totalInputs / this.state.userInput.length;
+    return Math.ceil(averageInput);
+  }
   render() {
+    let average = this.getAverage();
     return (
-      <Header/>
+      <Header average={average}/>
     );
   }
 }
