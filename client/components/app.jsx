@@ -44,7 +44,7 @@ export default class App extends React.Component {
           <Container>
             <Row>
               <InputTable
-              inputs={this.state.userInputs}
+              inputs={this.state.userInput}
               />
             </Row>
           </Container>

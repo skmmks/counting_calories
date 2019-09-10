@@ -10,6 +10,14 @@ export default class InputTable extends React.Component {
         };
     }
     render() {
+        let inputs = this.props.inputs.map(inputs => {
+            return (
+                <UserInput
+                    input={inputs}
+                    key={inputs.id}
+                />
+            );
+        });
         return(
             <Col>
                 <Table>
@@ -20,6 +28,7 @@ export default class InputTable extends React.Component {
                             <th>Calories</th>
                         </tr>
                     </thead>
+                    <tbody>{inputs}</tbody>
                 </Table>
             </Col>
         )
