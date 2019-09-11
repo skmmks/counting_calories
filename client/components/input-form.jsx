@@ -47,6 +47,21 @@ export default class InputForm extends React.Component {
                         </InputGroup>
                     </FormGroup>
                 </div>
+                <FormGroup>
+                    <div>
+                        <Button
+                        color="success"
+                        >
+                            Add
+                        </Button>
+                        <Button
+                        color="danger"
+                        type="reset"
+                        >
+                            Cancel
+                        </Button>
+                    </div>
+                </FormGroup>
             </Form>
         )
     }
