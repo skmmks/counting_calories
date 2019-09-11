@@ -4,5 +4,10 @@ import { InputGroup, InputGroupAddon, Input, Form, FormGroup, Button } from 'rea
 export default class InputForm extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            mealtime: '',
+            meal: '',
+            calories: '',
+        }
     }
 }
