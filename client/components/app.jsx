@@ -48,7 +48,7 @@ export default class App extends React.Component {
               inputs={this.state.userInput}
               />
               <InputForm
-              
+
               />
             </Row>
           </Container>
