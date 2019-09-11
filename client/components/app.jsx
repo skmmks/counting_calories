@@ -2,6 +2,7 @@ import React from 'react';
 import { Row, Container } from 'reactstrap';
 import Header from './header';
 import InputTable from './input-table';
+import InputForm from './input-form';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -45,6 +46,9 @@ export default class App extends React.Component {
             <Row>
               <InputTable
               inputs={this.state.userInput}
+              />
+              <InputForm
+              
               />
             </Row>
           </Container>
