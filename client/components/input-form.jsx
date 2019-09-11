@@ -20,10 +20,12 @@ export default class InputForm extends React.Component {
                     <FormGroup>
                         <InputGroup>
                             <InputGroupAddon addonType="prepend" className="input-group-text fas fa-utensils" />
-                            <Input
-                                type="text"
-                                placeholder="MealTime"
-                            />
+                            <Input type="select">
+                                <option>Breakfast</option>
+                                <option>Lunch</option>
+                                <option>Dinner</option>
+                                <option>Snack</option>
+                            </Input>
                         </InputGroup>
                     </FormGroup>
                     <FormGroup>
