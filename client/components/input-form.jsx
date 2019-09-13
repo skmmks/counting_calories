@@ -10,6 +10,7 @@ export default class InputForm extends React.Component {
             calories: ''
         };
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleChange = this.handleChange.bind(this);
     }
     handleSubmit(e) {
         e.preventDefault();
@@ -20,6 +21,11 @@ export default class InputForm extends React.Component {
             calories: ''
         })
     }
+    handleChange(e) {
+        this.setState({
+            [e.target.name]: e.target.value
+        });
+    }
     render() {
         return (
             <Form onSubmit={this.handleSubmit}>
@@ -27,7 +33,7 @@ export default class InputForm extends React.Component {
                     <FormGroup>
                         <InputGroup>
                             <InputGroupAddon addonType="prepend" className="input-group-text fas fa-utensils" />
-                            <Input type="select">
+                            <Input type="select" name='mealtime' onChange={this.handleChange} value={this.state.mealtime}>
                                 <option>Breakfast</option>
                                 <option>Lunch</option>
                                 <option>Dinner</option>
@@ -38,18 +44,14 @@ export default class InputForm extends React.Component {
                     <FormGroup>
                         <InputGroup>
                             <InputGroupAddon addonType="prepend" className="input-group-text fas fa-hotdog" />
-                            <Input
-                                type="text"
-                                placeholder="What did you Eat"
+                            <Input type="text" name="meal" placeholder="What did you Eat" onChange={this.handleChange} value={this.state.meal}
                             />
                         </InputGroup>
                     </FormGroup>
                     <FormGroup>
                         <InputGroup>
                             <InputGroupAddon addonType="prepend" className="input-group-text fas fa-weight" />
-                            <Input
-                                type="text"
-                                placeholder="Calories"
+                            <Input type="number" name="calories" placeholder="Calories" onChange={this.handleChange} value={this.state.calories}
                             />
                         </InputGroup>
                     </FormGroup>
