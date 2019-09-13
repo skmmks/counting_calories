@@ -8,11 +8,13 @@ export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      userInput: []
+      userInput: [],
+      editing: null
     };
+    this.setEditing = this.setEditing.bind(this);
     this.getUserInput = this.getUserInput.bind(this);
     this.addUserInput = this.addUserInput.bind(this);
-    this.deleteUserInput = this.deleteUserInput.bind(this); 
+    this.deleteUserInput = this.deleteUserInput.bind(this);
   }
   componentDidMount() {
     this.getUserInput();
@@ -54,6 +56,11 @@ export default class App extends React.Component {
             input.id !== id);
             this.setState({ input });
         });
+  }
+  setEditing(userInput) {
+    this.setState({
+      editing: userInput
+    });
   }
   getAverage() {
     if(!this.state.userInput.length) return 'N/A';
