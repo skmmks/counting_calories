@@ -7,15 +7,22 @@ export default class InputForm extends React.Component {
         this.state = {
             mealtime: '',
             meal: '',
-            calories: '',
+            calories: ''
         };
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
     handleSubmit(e) {
         e.preventDefault();
+        this.props.onSubmit(this.state);
+        this.setState({
+            mealtime: '',
+            meal: '',
+            calories: ''
+        })
     }
     render() {
         return (
-            <Form>
+            <Form onSubmit={this.handleSubmit}>
                 <div>
                     <FormGroup>
                         <InputGroup>
