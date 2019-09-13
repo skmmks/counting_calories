@@ -80,7 +80,8 @@ export default class App extends React.Component {
           <Container>
             <Row>
               <InputTable
-              inputs={this.state.userInput}
+                inputs={this.state.userInput}
+                deleteInput={this.deleteUserInput.bind(this)}
               />
               <InputForm
                   onSubmit={this.addUserInput}

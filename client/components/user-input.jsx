@@ -11,6 +11,16 @@ export default class UserInput extends React.Component {
                 <td>{this.props.input.mealtime}</td>
                 <td>{this.props.input.meal}</td>
                 <td>{this.props.input.calories}</td>
+                <td>
+                    <button
+                    type="button"
+                    className="btn btn-danger"
+                    onClick={event => {
+                        this.props.deleteInput(this.props.input.id);
+                    }}
+                    >
+                    </button>
+                </td>
             </tr>
         )
     }
