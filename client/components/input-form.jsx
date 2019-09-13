@@ -34,6 +34,7 @@ export default class InputForm extends React.Component {
                         <InputGroup>
                             <InputGroupAddon addonType="prepend" className="input-group-text fas fa-utensils" />
                             <Input type="select" name='mealtime' onChange={this.handleChange} value={this.state.mealtime}>
+                                <option>---</option>
                                 <option>Breakfast</option>
                                 <option>Lunch</option>
                                 <option>Dinner</option>
