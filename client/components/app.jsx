@@ -11,7 +11,7 @@ export default class App extends React.Component {
       userInput: []
     };
     this.getUserInput = this.getUserInput.bind(this);
-    this.addUserInput = this.addUserInput.bind(this); 
+    this.addUserInput = this.addUserInput.bind(this);
   }
   componentDidMount() {
     this.getUserInput();
@@ -28,17 +28,17 @@ export default class App extends React.Component {
         })
         .catch(error => console.error('error: ', error));
   }
-  addUserInput(input) {
+  addUserInput(userInput) {
     const newInput = {
       method: 'POST',
       headers: { 'Content-Type': 'application/json'},
-      body: JSON.stringify(input)
+      body: JSON.stringify(userInput)
     };
     fetch('/api/userInput', newInput)
         .then(res => res.json())
         .then(res => {
           this.setState({
-            userInput: this.state.userInput.concat(newInput)
+            userInput: this.state.userInput.concat(res)
           });
         })
         .catch(error => console.error('error: ', error));
