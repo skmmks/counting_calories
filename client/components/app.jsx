@@ -83,7 +83,7 @@ export default class App extends React.Component {
               inputs={this.state.userInput}
               />
               <InputForm
-
+                  onSubmit={this.addUserInput}
               />
             </Row>
           </Container>
