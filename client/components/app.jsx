@@ -12,6 +12,7 @@ export default class App extends React.Component {
     };
     this.getUserInput = this.getUserInput.bind(this);
     this.addUserInput = this.addUserInput.bind(this);
+    this.deleteUserInput = this.deleteUserInput.bind(this); 
   }
   componentDidMount() {
     this.getUserInput();
@@ -42,6 +43,17 @@ export default class App extends React.Component {
           });
         })
         .catch(error => console.error('error: ', error));
+  }
+  deleteUserInput(id) {
+    const delUserInput = {
+      method: 'DELETE'
+    };
+    fetch(`/api/userInput/${id}`, delUserInput)
+        .then(() => {
+          const input = this.state.userInput.filter(input =>
+            input.id !== id);
+            this.setState({ input });
+        });
   }
   getAverage() {
     if(!this.state.userInput.length) return 'N/A';
