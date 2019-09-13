@@ -15,10 +15,10 @@ export default class UserInput extends React.Component {
                     <button
                     type="button"
                     className="btn btn-danger"
-                    onClick={e => {
-                        e.preventDefault();
-                        this.props.deleteInput(console.log('test'));
-                    }}>
+                    onClick={event => {
+                        this.props.deleteInput(this.props.input.id);
+                    }}
+                    >
                     </button>
                 </td>
             </tr>
