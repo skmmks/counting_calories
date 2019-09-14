@@ -10,16 +10,26 @@ export default class InputTable extends React.Component {
         };
     }
     render() {
-        let inputs = this.props.inputs.map(inputs => {
+        let input = this.props.userInput.map(input => {
             return (
                 <UserInput
-                    input={inputs}
-                    key={inputs.id}
+                    input={input}
+                    key={input.id}
                     deleteInput={this.props.deleteInput}
                     setEditing={this.props.setEditing}
-                />
-            );
+                    />
+            )
         });
+        // let inputs = this.props.inputs.map(inputs => {
+        //     return (
+        //         <UserInput
+        //             input={inputs}
+        //             key={inputs.id}
+        //             deleteInput={this.props.deleteInput}
+        //             setEditing={this.props.setEditing}
+        //         />
+        //     );
+        // });
         return(
             <Col sm="8">
                 <Table hover striped bordered>
@@ -30,7 +40,7 @@ export default class InputTable extends React.Component {
                             <th scope="col">Calories</th>
                         </tr>
                     </thead>
-                    <tbody>{inputs}</tbody>
+                    <tbody>{input}</tbody>
                 </Table>
             </Col>
         )

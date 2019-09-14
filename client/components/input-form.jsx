@@ -5,6 +5,7 @@ export default class InputForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            id: 0,
             mealtime: '',
             meal: '',
             calories: ''
@@ -16,6 +17,7 @@ export default class InputForm extends React.Component {
         e.preventDefault();
         this.props.onSubmit(this.state);
         this.setState({
+            id: 0,
             mealtime: '',
             meal: '',
             calories: ''
