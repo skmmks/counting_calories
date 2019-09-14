@@ -15,6 +15,7 @@ export default class App extends React.Component {
     this.getUserInput = this.getUserInput.bind(this);
     this.addUserInput = this.addUserInput.bind(this);
     this.deleteUserInput = this.deleteUserInput.bind(this);
+    this.updateUserInput = this.updateUserInput.bind(this); 
   }
   componentDidMount() {
     this.getUserInput();
@@ -55,6 +56,22 @@ export default class App extends React.Component {
           const input = this.state.userInput.filter(input =>
             input.id !== id);
             this.setState({ input });
+        });
+  }
+  updateUserInput(userInput) {
+    const updateInput = {
+      method: 'PUT',
+      body: JSON.stringify(userInput),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    };
+    fetch(`/api/userInput/${userInput.id}`, updateInput)
+        .then(res => res.json())
+        .then(res => {
+          const inputs = this.state.userInput.map(inputs =>
+          inputs.id === res.id ? res : inputs);
+          this.setState({ inputs })
         });
   }
   setEditing(userInput) {
