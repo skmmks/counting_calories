@@ -62,7 +62,7 @@ export default class App extends React.Component {
         .then(() => {
           const input = this.state.userInput.filter(input =>
             input.id !== id);
-            this.setState({ input });
+            this.setState({ userInput:input });
         });
   }
   updateUserInput(userInput) {
