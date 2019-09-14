@@ -122,20 +122,21 @@ export default class App extends React.Component {
           <Container fluid>
             <Header average={average}/>
           </Container>
-          <Container>
+          <Container fluid>
             <Row>
               <InputTable
                 inputs={this.state.userInput}
-                deleteInput={this.deleteUserInput.bind(this)}
+                deleteInput={this.deleteUserInput}
+                setEditing={this.setEditing}
               />
               <InputForm
                   onSubmit={this.addUserInput}
                   handleReset={this.handleReset}
+                  setEditing={this.state.editing}
               />
             </Row>
           </Container>
         </div>
-
     );
   }
 }

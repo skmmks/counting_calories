@@ -16,17 +16,18 @@ export default class InputTable extends React.Component {
                     input={inputs}
                     key={inputs.id}
                     deleteInput={this.props.deleteInput}
+                    setEditing={this.props.setEditing}
                 />
             );
         });
         return(
-            <Col>
-                <Table>
+            <Col sm="8">
+                <Table hover striped bordered>
                     <thead>
                         <tr>
-                            <th>Meal Time</th>
-                            <th>Meal (What You Ate)</th>
-                            <th>Calories</th>
+                            <th scope="col">Meal Time</th>
+                            <th scope="col">Meal (What You Ate)</th>
+                            <th scope="col">Calories</th>
                         </tr>
                     </thead>
                     <tbody>{inputs}</tbody>
