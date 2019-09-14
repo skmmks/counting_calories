@@ -17,10 +17,10 @@ export default class UserInput extends React.Component {
                             className="far fa-edit editButton"
                             onClick={e => {
                                 this.props.setEditing({
-                                    id: this.props.userInput.id,
-                                    mealtime: this.props.userInput.mealtime,
-                                    meal: this.props.userInput.meal,
-                                    calories: this.props.userInput.calories
+                                    id: this.props.input.id,
+                                    mealtime: this.props.input.mealtime,
+                                    meal: this.props.input.meal,
+                                    calories: this.props.input.calories
                                 })
                             }}
                         />
