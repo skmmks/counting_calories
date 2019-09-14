@@ -28,7 +28,7 @@ export default class InputForm extends React.Component {
     }
     render() {
         return (
-            <Form onSubmit={this.handleSubmit}>
+            <Form onSubmit={this.handleSubmit} onReset={this.props.handleReset}>
                 <div>
                     <FormGroup>
                         <InputGroup>

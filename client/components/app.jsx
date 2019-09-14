@@ -16,7 +16,8 @@ export default class App extends React.Component {
     this.addUserInput = this.addUserInput.bind(this);
     this.deleteUserInput = this.deleteUserInput.bind(this);
     this.updateUserInput = this.updateUserInput.bind(this);
-    this.handleReset = this.handleReset.bind(this); 
+    this.handleReset = this.handleReset.bind(this);
+    this.submitUserInput = this.submitUserInput.bind(this);
   }
   componentDidMount() {
     this.getUserInput();
