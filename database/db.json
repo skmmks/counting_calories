@@ -1,10 +1,16 @@
 {
   "userInput": [
     {
+      "id": 1,
+      "mealtime": "Breakfast",
+      "meal": "egg",
+      "calories": "100"
+    },
+    {
+      "id": 2,
       "mealtime": "Lunch",
       "meal": "blt",
-      "calories": "100",
-      "id": 1
+      "calories": "100"
     }
   ]
 }

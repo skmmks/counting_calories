@@ -9,7 +9,12 @@ export default class App extends React.Component {
     super(props);
     this.state = {
       userInput: [],
-      editing: null
+      editing: {
+        id: 0,
+        mealtime: '',
+        meal: '',
+        calories: ''
+      }
     };
     this.setEditing = this.setEditing.bind(this);
     this.getUserInput = this.getUserInput.bind(this);
@@ -80,27 +85,34 @@ export default class App extends React.Component {
     if (userInput.id === 0) {
       this.addUserInput(userInput);
       this.setState({
-        id: 0,
-        mealtime: '',
-        meal: '',
-        calories: ''
-      })
+        editing: {
+          id: 0,
+          mealtime: '',
+          meal: '',
+          calories: ''
+        }
+      });
     } else {
       this.updateUserInput(userInput);
       this.setState({
-        id: 0,
-        mealtime: '',
-        meal: '',
-        calories: ''
+        editing: {
+          id: 0,
+          mealtime: '',
+          meal: '',
+          calories: ''
+        }
       })
     }
   }
   handleReset(e) {
     this.setState({
-      id: 0,
-      mealtime: '',
-      meal: ''
-    })
+      editing: {
+        id: 0,
+        mealtime: '',
+        meal: '',
+        calories: ''
+      }
+    });
   }
   setEditing(userInput) {
     this.setState({
@@ -125,12 +137,12 @@ export default class App extends React.Component {
           <Container fluid>
             <Row>
               <InputTable
-                inputs={this.state.userInput}
+                userInput={this.state.userInput}
                 deleteInput={this.deleteUserInput}
                 setEditing={this.setEditing}
               />
               <InputForm
-                  onSubmit={this.addUserInput}
+                  onSubmit={this.submitUserInput}
                   handleReset={this.handleReset}
                   setEditing={this.state.editing}
               />
