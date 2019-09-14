@@ -38,6 +38,7 @@ export default class InputTable extends React.Component {
                             <th scope="col">Meal Time</th>
                             <th scope="col">Meal (What You Ate)</th>
                             <th scope="col">Calories</th>
+                            <th scope="col">Actions</th>
                         </tr>
                     </thead>
                     <tbody>{input}</tbody>
