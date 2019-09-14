@@ -16,6 +16,7 @@ export default class InputTable extends React.Component {
                     input={inputs}
                     key={inputs.id}
                     deleteInput={this.props.deleteInput}
+                    setEditing={this.props.setEditing}
                 />
             );
         });
