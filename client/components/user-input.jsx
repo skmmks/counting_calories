@@ -4,6 +4,15 @@ import { Button, Modal, ModalBody, ModalFooter } from 'reactstrap';
 export default class UserInput extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            modal: false
+        };
+        this.toggle = this.toggle.bind(this);
+    }
+    toggle() {
+        this.setState(previousState => ({
+            modal: !previousState.modal
+        }));
     }
     render() {
         return (
