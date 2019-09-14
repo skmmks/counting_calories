@@ -42,18 +42,28 @@ export default class UserInput extends React.Component {
                             toggle={this.toggle}
                             className={this.props.className}
                         >
-                            <ModalBody className="text-center">Are you sure you want to delete "{this.props.input.mealtime} - {this.props.input.meal}"</ModalBody>
+                            <ModalBody className="text-center">
+                                Are you sure you want to delete "{this.props.input.mealtime} - {this.props.input.meal}"
+                            </ModalBody>
+                            <ModalFooter>
+                                <Button
+                                    color="danger"
+                                    onClick={event => {
+                                        this.props.deleteInput(this.props.input.id);
+                                    }}
+                                >
+                                    Delete
+                                </Button>
+                                <Button
+                                    color="success"
+                                    onClick={this.toggle}
+                                >
+                                    Cancel
+                                </Button>
+                            </ModalFooter>
                         </Modal>
 
                     </div>
-                    <button
-                    type="button"
-                    className="btn btn-danger"
-                    onClick={event => {
-                        this.props.deleteInput(this.props.input.id);
-                    }}
-                    >
-                    </button>
                 </td>
             </tr>
         )
