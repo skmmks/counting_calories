@@ -15,7 +15,7 @@ export default class App extends React.Component {
     this.getUserInput = this.getUserInput.bind(this);
     this.addUserInput = this.addUserInput.bind(this);
     this.deleteUserInput = this.deleteUserInput.bind(this);
-    this.updateUserInput = this.updateUserInput.bind(this); 
+    this.updateUserInput = this.updateUserInput.bind(this);
   }
   componentDidMount() {
     this.getUserInput();
@@ -73,6 +73,25 @@ export default class App extends React.Component {
           inputs.id === res.id ? res : inputs);
           this.setState({ inputs })
         });
+  }
+  submitUserInput(userInput) {
+    if (userInput.id === 0) {
+      this.addUserInput(userInput);
+      this.setState({
+        id: 0,
+        mealtime: '',
+        meal: '',
+        calories: ''
+      })
+    } else {
+      this.updateUserInput(userInput);
+      this.setState({
+        id: 0,
+        mealtime: '',
+        meal: '',
+        calories: ''
+      })
+    }
   }
   setEditing(userInput) {
     this.setState({

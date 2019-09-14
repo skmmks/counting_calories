@@ -1,3 +1,28 @@
 {
-  "userInput": []
+  "userInput": [
+    {
+      "mealtime": "",
+      "meal": "egg",
+      "calories": "100",
+      "id": 1
+    },
+    {
+      "mealtime": "Select",
+      "meal": "egg",
+      "calories": "1",
+      "id": 2
+    },
+    {
+      "mealtime": "",
+      "meal": "egg",
+      "calories": "1",
+      "id": 3
+    },
+    {
+      "mealtime": "Lunch",
+      "meal": "",
+      "calories": "",
+      "id": 4
+    }
+  ]
 }
