@@ -16,6 +16,7 @@ export default class App extends React.Component {
     this.addUserInput = this.addUserInput.bind(this);
     this.deleteUserInput = this.deleteUserInput.bind(this);
     this.updateUserInput = this.updateUserInput.bind(this);
+    this.handleReset = this.handleReset.bind(this); 
   }
   componentDidMount() {
     this.getUserInput();
@@ -93,6 +94,13 @@ export default class App extends React.Component {
       })
     }
   }
+  handleReset(e) {
+    this.setState({
+      id: 0,
+      mealtime: '',
+      meal: ''
+    })
+  }
   setEditing(userInput) {
     this.setState({
       editing: userInput
@@ -121,6 +129,7 @@ export default class App extends React.Component {
               />
               <InputForm
                   onSubmit={this.addUserInput}
+                  handleReset={this.handleReset}
               />
             </Row>
           </Container>
