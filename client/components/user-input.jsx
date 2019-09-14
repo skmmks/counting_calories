@@ -64,6 +64,14 @@ export default class UserInput extends React.Component {
                         </Modal>
 
                     </div>
+                    <button
+                    type="button"
+                    className="btn btn-danger"
+                    onClick={event => {
+                        this.props.deleteInput(this.props.input.id);
+                    }}
+                    >
+                    </button>
                 </td>
             </tr>
         )
