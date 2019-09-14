@@ -23,7 +23,7 @@ export default class UserInput extends React.Component {
                 <td>
                     <div>
                         <i
-                            className="far fa-edit editButton"
+                            className="fa fa-edit editButton"
                             onClick={e => {
                                 this.props.setEditing({
                                     id: this.props.input.id,
@@ -34,8 +34,17 @@ export default class UserInput extends React.Component {
                             }}
                         />
                         <i
-                            className="far fa-trash-alt deleteButton"
+                            className="fa fa-trash deleteButton"
+                            onClick={this.toggle}
                         />
+                        <Modal
+                            isOpen={this.state.modal}
+                            toggle={this.toggle}
+                            className={this.props.className}
+                        >
+                            <ModalBody className="text-center">Are you sure you want to delete "{this.props.input.mealtime} - {this.props.input.meal}"</ModalBody>
+                        </Modal>
+
                     </div>
                     <button
                     type="button"
