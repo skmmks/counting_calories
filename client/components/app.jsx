@@ -106,11 +106,13 @@ export default class App extends React.Component {
   }
   handleReset(e) {
     this.setState({
-      id: 0,
-      mealtime: '',
-      meal: '',
-      calories: ''
-    })
+      editing: {
+        id: 0,
+        mealtime: '',
+        meal: '',
+        calories: ''
+      }
+    });
   }
   setEditing(userInput) {
     this.setState({
@@ -140,7 +142,7 @@ export default class App extends React.Component {
                 setEditing={this.setEditing}
               />
               <InputForm
-                  onSubmit={this.addUserInput}
+                  onSubmit={this.submitUserInput}
                   handleReset={this.handleReset}
                   setEditing={this.state.editing}
               />

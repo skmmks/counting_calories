@@ -5,6 +5,12 @@
       "mealtime": "Breakfast",
       "meal": "egg",
       "calories": "100"
+    },
+    {
+      "id": 2,
+      "mealtime": "Lunch",
+      "meal": "blt",
+      "calories": "100"
     }
   ]
 }
