@@ -78,7 +78,7 @@ export default class App extends React.Component {
         .then(res => {
           const inputs = this.state.userInput.map(inputs =>
           inputs.id === res.id ? res : inputs);
-          this.setState({ inputs })
+          this.setState({ userInput: inputs })
         });
   }
   submitUserInput(userInput) {
