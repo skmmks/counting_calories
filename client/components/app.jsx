@@ -115,9 +115,7 @@ export default class App extends React.Component {
     });
   }
   setEditing(userInput) {
-    this.setState({
-      editing: userInput
-    });
+    this.setState({ editing: userInput });
   }
   getAverage() {
     if(!this.state.userInput.length) return 'N/A';

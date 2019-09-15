@@ -8,10 +8,16 @@ export default class InputForm extends React.Component {
             id: 0,
             mealtime: '',
             meal: '',
-            calories: ''
+            calories: '',
+            note: ''
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
+    }
+    componentDidUpdate(props) {
+        if (this.props.setEditing.id !== props.setEditing.id) {
+            this.setState(this.props.setEditing);
+        }
     }
     handleSubmit(e) {
         e.preventDefault();

@@ -20,23 +20,13 @@ export default class InputTable extends React.Component {
                     />
             )
         });
-        // let inputs = this.props.inputs.map(inputs => {
-        //     return (
-        //         <UserInput
-        //             input={inputs}
-        //             key={inputs.id}
-        //             deleteInput={this.props.deleteInput}
-        //             setEditing={this.props.setEditing}
-        //         />
-        //     );
-        // });
         return(
             <Col sm="8">
                 <Table hover striped bordered>
                     <thead>
                         <tr>
                             <th scope="col">Meal Time</th>
-                            <th scope="col">Meal (What You Ate)</th>
+                            <th scope="col">Food Item</th>
                             <th scope="col">Calories</th>
                             <th scope="col">Actions</th>
                         </tr>
