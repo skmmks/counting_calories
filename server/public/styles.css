@@ -23,7 +23,7 @@ body {
     background-color: #ffffff;
 }
 .header {
-    background-color: #90dff6;
+    background-color: #0000FF;
     color: #ffffff;
     font-family: 'calibri', 'arial';
     text-transform: uppercase;
@@ -31,7 +31,20 @@ body {
 footer {
     bottom: 0;
     height: 5vh;
-    background-color: #90dff6;
+    background-color: #0000FF;
     color: #ffffff;
     font-size: small
+}
+.formButton {
+    margin: auto;
+}
+.editButton {
+    color: orange;
+}
+.deleteButton {
+    color: blue;
+}
+.editButton, .deleteButton{
+    font-size: larger;
+    cursor: pointer;
 }
