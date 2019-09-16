@@ -76,6 +76,24 @@ export default class InputForm extends React.Component {
     //     }
     // }
     render() {
+        let regex = /\d+/;
+        let addInput;
+        if (
+            (this.state.calories) &&
+            regex.test(this.state.calories) &&
+            this.state.meal.length > 1
+        ) {
+            addInput = <Button color="success">
+                {this.state.id === 0 ? 'Add' : 'Update'} </Button>
+        } else {
+            addInput = <Button color="secondary" disabled>Please Complete Above</Button>
+        }
+        let editText;
+        if (this.state.id === 0) {
+            editText = 'form-control';
+        } else {
+            editText = 'form-control editText';
+        }
         return (
             <Form onSubmit={this.handleSubmit} onReset={this.props.handleReset}>
                 <div>
@@ -84,6 +102,7 @@ export default class InputForm extends React.Component {
                             <InputGroupAddon addonType="prepend" className="input-group-text fas fa-utensils" />
                             <Input
                                 type="select"
+                                className={editText}
                                 name='mealtime'
                                 value={this.state.mealtime}
                                 onChange={e => {
@@ -103,6 +122,7 @@ export default class InputForm extends React.Component {
                             <InputGroupAddon addonType="prepend" className="input-group-text fas fa-hotdog" />
                             <Input
                                 type="text"
+                                className={editText}
                                 name="meal"
                                 placeholder="What did you Eat"
                                 value={this.state.meal}
@@ -117,6 +137,7 @@ export default class InputForm extends React.Component {
                             <InputGroupAddon addonType="prepend" className="input-group-text fas fa-weight" />
                             <Input
                                 type="number"
+                                className={editText}
                                 name="calories"
                                 placeholder="Calories"
                                 value={this.state.calories}
@@ -130,11 +151,12 @@ export default class InputForm extends React.Component {
                 </div>
                 <FormGroup>
                     <div>
-                        <Button
-                        color="success"
-                        >
-                            Add
-                        </Button>
+                        {addInput}
+                        {/*<Button*/}
+                        {/*color="success"*/}
+                        {/*>*/}
+                        {/*    Add*/}
+                        {/*</Button>*/}
                         <Button
                         color="danger"
                         type="reset"
