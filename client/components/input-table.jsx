@@ -21,7 +21,7 @@ export default class InputTable extends React.Component {
             )
         });
         return(
-            <Col sm="8">
+            <Col sm="8" className="inputTable text-center">
                 <Table hover striped bordered>
                     <thead>
                         <tr>

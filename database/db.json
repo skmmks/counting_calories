@@ -3,8 +3,8 @@
     {
       "id": 1,
       "mealtime": "Breakfast",
-      "meal": "234",
-      "calories": "345",
+      "meal": "Eggs",
+      "calories": "100",
       "note": ""
     }
   ]
