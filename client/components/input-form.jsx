@@ -59,7 +59,7 @@ export default class InputForm extends React.Component {
             addInput = <Button color="success" className="mr-1 mt-1 submitButton">
                 {this.state.id === 0 ? 'Add' : 'Update'} </Button>
         } else {
-            addInput = <Button color="secondary" className="mr-1 mt-1 submitButton" disabled>Please Complete Above</Button>
+            addInput = <Button color="secondary" className="mr-1 mt-1 submitButton" disabled>Please Complete Form</Button>
         }
         let editText;
         if (this.state.id === 0) {

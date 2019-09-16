@@ -1,13 +1,6 @@
 {
   "userInput": [
     {
-      "id": 1,
-      "mealtime": "Breakfast",
-      "meal": "Eggs",
-      "calories": "100",
-      "note": ""
-    },
-    {
       "id": 2,
       "mealtime": "Lunch",
       "meal": "B.L.T ",
@@ -26,6 +19,13 @@
       "mealtime": "Snack",
       "meal": "Chips",
       "calories": "70",
+      "note": ""
+    },
+    {
+      "id": 5,
+      "mealtime": "Breakfast",
+      "meal": "lkhcd",
+      "calories": "1111",
       "note": ""
     }
   ]
