@@ -79,14 +79,14 @@ export default class InputForm extends React.Component {
         let regex = /\d+/;
         let addInput;
         if (
-            // (this.state.calorie) &&
-            // regex.test(this.state.calorie) &&
-            this.state.meal.length >= 1
+            (this.state.calories) &&
+            regex.test(this.state.calories) &&
+            this.state.meal.length > 1
         ) {
             addInput = <Button color="success">
                 {this.state.id === 0 ? 'Add' : 'Update'} </Button>
         } else {
-            addInput = <Button color="secondary" disabled>Please Complete Form</Button>
+            addInput = <Button color="secondary" disabled>Please Complete Above</Button>
         }
         let editText;
         if (this.state.id === 0) {
