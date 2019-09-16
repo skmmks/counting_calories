@@ -23,7 +23,7 @@ body {
     background-color: #ffffff;
 }
 .header {
-    background-color: #0000FF;
+    background-color: #006400;
     color: #ffffff;
     font-family: 'calibri', 'arial';
     text-transform: uppercase;
@@ -31,7 +31,7 @@ body {
 footer {
     bottom: 0;
     height: 5vh;
-    background-color: #0000FF;
+    background-color: #006400;
     color: #ffffff;
     font-size: small
 }
