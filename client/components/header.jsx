@@ -6,7 +6,7 @@ function Header(props) {
         <Row className="header">
             <img src="images/smoothies.png" alt="smoothie logo" className="logo"/>
             <Col className="title">The Helpful Calorie Counter</Col>
-            <Col sm="4" className="average">Average: <Badge className="badge" color="success">{props.average}</Badge></Col>
+            <Col sm="4" className="average">Average: <Badge className="ml-2 mb-2" color="light">{props.average}</Badge></Col>
         </Row>
     )
 }
