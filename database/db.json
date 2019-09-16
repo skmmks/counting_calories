@@ -2,23 +2,37 @@
   "userInput": [
     {
       "id": 1,
-      "mealtime": "Lunch",
-      "meal": "sand",
-      "calories": "100",
+      "mealtime": "Breakfast",
+      "meal": "Eggs",
+      "calories": "150",
       "note": ""
     },
     {
       "id": 2,
       "mealtime": "Lunch",
-      "meal": "hotdogs",
-      "calories": "1000",
+      "meal": "B.L.T",
+      "calories": "500",
       "note": ""
     },
     {
       "id": 3,
-      "mealtime": "Breakfast",
-      "meal": "Eggs ",
+      "mealtime": "Snack",
+      "meal": "Chips",
       "calories": "100",
+      "note": ""
+    },
+    {
+      "id": 4,
+      "mealtime": "Dinner",
+      "meal": "Steak ",
+      "calories": "800",
+      "note": ""
+    },
+    {
+      "id": 5,
+      "mealtime": "Snack",
+      "meal": "Milk & Cereal",
+      "calories": "70",
       "note": ""
     }
   ]
