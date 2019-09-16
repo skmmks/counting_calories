@@ -20,6 +20,13 @@
       "meal": "Steak Dinner",
       "calories": "700",
       "note": ""
+    },
+    {
+      "id": 4,
+      "mealtime": "Snack",
+      "meal": "Chips",
+      "calories": "70",
+      "note": ""
     }
   ]
 }
