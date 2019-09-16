@@ -19,3 +19,47 @@
 .formWrapper {
     min-height: 95vh;
 }
+body {
+    background-color: #f2fff9;
+}
+.header {
+    background-color: #006400;
+    color: #ffffff;
+    font-family: 'calibri', 'arial';
+    text-transform: uppercase;
+    background-image: url("images/fruit-background.jpg");
+    background-size: 100%;
+}
+footer {
+    bottom: 0;
+    height: 5vh;
+    background-color: #006400;
+    color: #ffffff;
+    font-size: small
+}
+.formButton {
+    margin: auto;
+}
+.editButton {
+    color: #484848;
+}
+.deleteButton {
+    color: #cc5500;
+}
+.editButton, .deleteButton{
+    font-size: larger;
+    cursor: pointer;
+}
+.inputTable {
+    font-size: 15px;
+}
+.submitButton, .submitButton:hover, .submitButton:active, .submitButton:focus{
+    background-color: #006400;
+    border-color: #ffffff;
+}
+.editInputText {
+    background-color: #3CB371;
+    color: #ffffff;
+    margin-right: 1%;
+    margin-top: 1%;
+}
