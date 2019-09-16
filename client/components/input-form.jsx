@@ -56,19 +56,19 @@ export default class InputForm extends React.Component {
             regex.test(this.state.calories) &&
             this.state.meal.length > 1
         ) {
-            addInput = <Button color="success">
+            addInput = <Button color="success" className="mr-1 mt-1 addButton">
                 {this.state.id === 0 ? 'Add' : 'Update'} </Button>
         } else {
-            addInput = <Button color="secondary" disabled>Please Complete Above</Button>
+            addInput = <Button color="secondary" className="mr-1 mt-1 addButton" disabled>Please Complete Above</Button>
         }
         let editText;
         if (this.state.id === 0) {
             editText = 'form-control';
         } else {
-            editText = 'form-control editText';
+            editText = 'form-control editInputText';
         }
         return (
-            <Form onSubmit={this.handleSubmit} onReset={this.props.handleReset}>
+            <Form className="col-sm mt-3" onSubmit={this.handleSubmit} onReset={this.props.handleReset}>
                 <div>
                     <FormGroup>
                         <InputGroup>
@@ -125,12 +125,8 @@ export default class InputForm extends React.Component {
                 <FormGroup>
                     <div>
                         {addInput}
-                        {/*<Button*/}
-                        {/*color="success"*/}
-                        {/*>*/}
-                        {/*    Add*/}
-                        {/*</Button>*/}
                         <Button
+                            className="mt-1 mr-1"
                         color="danger"
                         type="reset"
                         >

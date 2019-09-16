@@ -20,13 +20,15 @@
     min-height: 95vh;
 }
 body {
-    background-color: #ffffff;
+    background-color: #f2fff9;
 }
 .header {
     background-color: #006400;
     color: #ffffff;
     font-family: 'calibri', 'arial';
     text-transform: uppercase;
+    background-image: url("images/fruit-background.jpg");
+    background-size: 100%;
 }
 footer {
     bottom: 0;
@@ -39,10 +41,10 @@ footer {
     margin: auto;
 }
 .editButton {
-    color: orange;
+    color: #484848;
 }
 .deleteButton {
-    color: blue;
+    color: #cc5500;
 }
 .editButton, .deleteButton{
     font-size: larger;
@@ -50,4 +52,12 @@ footer {
 }
 .inputTable {
     font-size: 15px;
+}
+.addButton, .addButton:hover, .addButton:active, .addButton:focus{
+    background-color: #006400;
+    border-color: #ffffff;
+}
+.editInputText {
+    background-color: #3CB371;
+    color: aliceblue;
 }
