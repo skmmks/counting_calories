@@ -35,20 +35,6 @@ export default class InputForm extends React.Component {
             [e.target.name]: e.target.value
         });
     }
-    // mealTimeValidate(e) {
-    //     if(this.state.mealtime === "---") {
-    //         this.setState({
-    //             [e.target.name]: e.target.value,
-    //             note: 'Please enter a valid mealtime'
-    //         });
-    //     }
-    //     else {
-    //         this.setState({
-    //             [e.target.name]: e.target.value,
-    //             note: ''
-    //         });
-    //     }
-    // }
     mealValidate(e) {
         if(this.state.meal.length >= 1) {
             this.setState({
@@ -62,19 +48,6 @@ export default class InputForm extends React.Component {
             });
         }
     }
-    // calorieValidate(e) {
-    //     if(this.state.calorie >= 0) {
-    //         this.setState({
-    //             [e.target.name]: e.target.value,
-    //             note: ''
-    //         });
-    //     } else {
-    //         this.setState({
-    //             [e.target.name]: e.target.value,
-    //             note: 'Please enter a number'
-    //         });
-    //     }
-    // }
     render() {
         let regex = /\d+/;
         let addInput;
