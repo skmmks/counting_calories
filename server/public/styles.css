@@ -19,3 +19,6 @@
 .formWrapper {
     min-height: 95vh;
 }
+body {
+    background-color: RGB(255,255,255);
+}
