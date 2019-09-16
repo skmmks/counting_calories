@@ -53,17 +53,13 @@ footer {
 .inputTable {
     font-size: 15px;
 }
-.addButton, .addButton:hover, .addButton:active, .addButton:focus{
+.submitButton, .submitButton:hover, .submitButton:active, .submitButton:focus{
     background-color: #006400;
     border-color: #ffffff;
 }
 .editInputText {
     background-color: #3CB371;
     color: #ffffff;
-    margin-right: 1%;
-    margin-top: 1%;
-}
-.addButton {
     margin-right: 1%;
     margin-top: 1%;
 }
