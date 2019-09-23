@@ -1,3 +1,6 @@
+# Live Site - http://calories.stevekmin.com
+<img src="caloriedemo.gif">
+
 # The Helpful Calorie Counter
 The Helpful Calorie Counter application is a full stack app that allows user to keep track of their caloric intake.  The application allows users to Create, Read, Update, and Delete custom inputs related to their caloric intake.  
 
@@ -23,5 +26,3 @@ Navigate to `localhost:3000` to use the application
 - Reactstrap - Used for desktop and mobile views
 - Node.js
 
-# Live Site 
-- http://calories.stevekmin.com
