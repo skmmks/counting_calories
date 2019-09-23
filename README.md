@@ -1,4 +1,4 @@
-# Live Site - <a href="http://calories.stevekmin.com">Calorie Counter</a> 
+# Live Demo - <a href="http://calories.stevekmin.com">Calorie Counter</a> 
 <img src="caloriedemo.gif">
 
 # The Helpful Calorie Counter
