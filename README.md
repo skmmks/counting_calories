@@ -3,7 +3,7 @@ The Helpful Calorie Counter application is a full stack app that allows user to 
 
 # Getting Started 
 Fork this repo and clone your fork from the terminal.  
-- `git clone https://github.com/(your_user_name)/counting_calories.git`  
+- `git clone https://github.com/skmmks/counting_calories.git`  
 
 Navigate into the cloned directory and install the necessary dependencies.  
 - `npm install`  
