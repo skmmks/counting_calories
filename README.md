@@ -1,4 +1,6 @@
 # The Helpful Calorie Counter
+The Helpful Calorie Counter application is a full stack app that allows user to keep track of their caloric intake.  The application allows users to Create, Read, Update, and Delete custom inputs related to their caloric intake.  
+
 # Getting Started 
 Fork this repo and clone your fork from the terminal.  
 - `git clone https://github.com/(your_user_name)/counting_calories.git`  
