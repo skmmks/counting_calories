@@ -16,5 +16,10 @@ Run the `dev` script to start dev server
 Navigate to `localhost:3000` to use the application
 
 # Technologies Used
+- Javascript 
+- React.js
+- Reactstrap - Used for desktop and mobile views
+- Node.js
+
 # Live Site 
 - http://calories.stevekmin.com
