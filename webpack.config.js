@@ -1,41 +1,25 @@
+const fs = require('fs');
 const path = require('path');
+require('dotenv').config({ path: path.join(__dirname, '/../.env') });
+const jsonServer = require('json-server');
 
-const srcPath = path.resolve(__dirname, 'client');
-const publicPath = path.resolve(__dirname, 'server/public');
+const dbPath = path.resolve(__dirname, '../database/db.json');
+const server = jsonServer.create();
+const middleware = jsonServer.defaults();
+const endpoints = jsonServer.router(dbPath);
 
-module.exports = {
-    resolve: {
-        extensions: ['.js', '.jsx']
-    },
-    entry: './client',
-    output: {
-        path: publicPath
-    },
-    module: {
-        rules: [
-            {
-                test: /\.jsx?$/,
-                include: srcPath,
-                use: {
-                    loader: 'babel-loader',
-                    options: {
-                        plugins: [
-                            '@babel/plugin-transform-react-jsx'
-                        ]
-                    }
-                }
-            }
-        ]
-    },
-    devtool: 'source-map',
-    devServer: {
-        host: '0.0.0.0',
-        port: 3000,
-        contentBase: publicPath,
-        watchContentBase: true,
-        stats: 'minimal',
-        proxy: {
-            '/api': 'http://localhost:3001'
-        }
-    }
-};
+const data = require(dbPath);
+const db = endpoints.db;
+
+setInterval(() => {
+  fs.writeFile(dbPath, JSON.stringify(data, null, 2), () => {
+    db.read();
+  });
+}, 1000 * 60 * 5);
+
+server.use(middleware);
+server.use('/api', endpoints);
+server.listen(process.env.PORT, () => {
+  // eslint-disable-next-line no-console
+  console.log('JSON Server listening on port', process.env.PORT);
+});
