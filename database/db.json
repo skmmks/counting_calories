@@ -1,24 +1,45 @@
 {
   "userInput": [
     {
+      "id": 1,
+      "mealtime": "Breakfast",
+      "meal": "2 Eggs",
+      "calories": "100",
+      "note": ""
+    },
+    {
       "id": 2,
       "mealtime": "Lunch",
       "meal": "B.L.T ",
-      "calories": "150",
+      "calories": "600",
       "note": ""
     },
     {
       "id": 3,
-      "mealtime": "Dinner",
-      "meal": "Apple salad",
-      "calories": "700",
+      "mealtime": "Snack",
+      "meal": "Cheese ",
+      "calories": "300",
       "note": ""
     },
     {
       "id": 4,
       "mealtime": "Snack",
-      "meal": "Chips",
-      "calories": "70",
+      "meal": "Apples ",
+      "calories": "100",
+      "note": ""
+    },
+    {
+      "id": 5,
+      "mealtime": "Dinner",
+      "meal": "Steak Salad",
+      "calories": "800",
+      "note": ""
+    },
+    {
+      "id": 6,
+      "mealtime": "Snack",
+      "meal": "Ice Cream Sammie",
+      "calories": "350",
       "note": ""
     }
   ]
