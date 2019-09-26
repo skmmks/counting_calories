@@ -4,3 +4,4 @@
 node_modules
 server/public/main.js*
 mysql_credentials.js
+.env
