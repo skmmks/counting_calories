@@ -122,8 +122,8 @@ export default class App extends React.Component {
     const totalInputs = this.state.userInput.reduce((total, calories) => {
       return total + parseInt(calories.calories) ;
     }, 0);
-    const averageInput = totalInputs / this.state.userInput.length;
-    return 'Average: ' + averageInput.toFixed(2);
+    // const averageInput = totalInputs / this.state.userInput.length;
+    return 'Total: ' + totalInputs + ' cal.';
   }
   render() {
     let average = this.getAverage();

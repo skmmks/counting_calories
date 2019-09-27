@@ -82,7 +82,7 @@ export default class InputForm extends React.Component {
                                     this.handleChange(e)
                                 }}
                             >
-                                    <option>---</option>
+                                    <option hidden>MealTime</option>
                                     <option>Breakfast</option>
                                     <option>Lunch</option>
                                     <option>Dinner</option>
