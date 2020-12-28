@@ -42,28 +42,26 @@ export default class App extends React.Component {
   addUserInput(userInput) {
     const newInput = {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json'},
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(userInput)
     };
     fetch('/api/userInput', newInput)
-        .then(res => res.json())
-        .then(res => {
-          this.setState({
-            userInput: this.state.userInput.concat(res)
-          });
-        })
-        .catch(error => console.error('error: ', error));
+      .then(res => res.json())
+      .then(res => {
+        this.setState({
+          userInput: this.state.userInput.concat(res)
+        });
+      })
+      .catch(error => console.error('error: ', error));
   }
   deleteUserInput(id) {
     const delUserInput = {
       method: 'DELETE'
     };
-    fetch(`/api/userInput/${id}`, delUserInput)
-        .then(() => {
-          const input = this.state.userInput.filter(input =>
-            input.id !== id);
-            this.setState({ userInput:input });
-        });
+    fetch(`/api/userInput/${id}`, delUserInput).then(() => {
+      const input = this.state.userInput.filter(input => input.id !== id);
+      this.setState({ userInput: input });
+    });
   }
   updateUserInput(userInput) {
     const updateInput = {
@@ -74,12 +72,11 @@ export default class App extends React.Component {
       }
     };
     fetch(`/api/userInput/${userInput.id}`, updateInput)
-        .then(res => res.json())
-        .then(res => {
-          const inputs = this.state.userInput.map(inputs =>
-          inputs.id === res.id ? res : inputs);
-          this.setState({ userInput: inputs })
-        });
+      .then(res => res.json())
+      .then(res => {
+        const inputs = this.state.userInput.map(inputs => (inputs.id === res.id ? res : inputs));
+        this.setState({ userInput: inputs });
+      });
   }
   submitUserInput(userInput) {
     if (userInput.id === 0) {
@@ -101,7 +98,7 @@ export default class App extends React.Component {
           meal: '',
           calories: ''
         }
-      })
+      });
     }
   }
   handleReset(e) {
@@ -118,9 +115,9 @@ export default class App extends React.Component {
     this.setState({ editing: userInput });
   }
   getAverage() {
-    if(!this.state.userInput.length) return 'N/A';
+    if (!this.state.userInput.length) return 'N/A';
     const totalInputs = this.state.userInput.reduce((total, calories) => {
-      return total + parseInt(calories.calories) ;
+      return total + parseInt(calories.calories);
     }, 0);
     // const averageInput = totalInputs / this.state.userInput.length;
     return 'Total: ' + totalInputs + ' cal.';
@@ -128,25 +125,21 @@ export default class App extends React.Component {
   render() {
     let average = this.getAverage();
     return (
-        <div className="formWrapper">
-          <Container fluid>
-            <Header average={average}/>
-          </Container>
-          <Container fluid>
-            <Row>
-              <InputTable
-                userInput={this.state.userInput}
-                deleteInput={this.deleteUserInput}
-                setEditing={this.setEditing}
-              />
-              <InputForm
-                  onSubmit={this.submitUserInput}
-                  handleReset={this.handleReset}
-                  setEditing={this.state.editing}
-              />
-            </Row>
-          </Container>
-        </div>
+      <div className='formWrapper'>
+        <Container fluid>
+          <Header average={average} />
+        </Container>
+        <Container fluid>
+          <Row>
+            <InputTable
+              userInput={this.state.userInput}
+              deleteInput={this.deleteUserInput}
+              setEditing={this.setEditing}
+            />
+            <InputForm onSubmit={this.submitUserInput} handleReset={this.handleReset} setEditing={this.state.editing} />
+          </Row>
+        </Container>
+      </div>
     );
   }
 }
